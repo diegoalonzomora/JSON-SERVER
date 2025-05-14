@@ -1,102 +1,129 @@
 {
-  "transactions": [
+  "users": [
     {
+      "username": "andraice",
+      "email": "albertosanchez@upc.edu.pe",
+      "password": "vue",
+      "type": "student",
+      "maxDailyReservationHours": 7,
       "id": 1,
-      "date": "2019-12-01",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": 1000
+      "paymentInformation": {
+        "cardNumber": "94949494949494",
+        "type": "VISA",
+        "holder": "Alberto Sanchez"
+      }
     },
     {
+      "username": "carlo123",
+      "email": "carlo@upc.edu.pe",
+      "password": "123",
+      "type": "student",
+      "maxDailyReservationHours": 7,
       "id": 2,
-      "date": "2019-12-01",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-      "category": "Food",
-      "amount": -10.55
+      "paymentInformation": {
+        "cardNumber": "191919191919",
+        "type": "VISA",
+        "holder": "Carlo Aguilar"
+      }
     },
     {
       "id": 3,
-      "date": "2019-12-02",
-      "description": "South by Southwest Quinoa Bowl at Fresh & Co",
-      "category": "Food",
-      "amount": -10.55
+      "username": "turista",
+      "email": "turista@gmail.com",
+      "passport": "9123412494",
+      "password": "1234",
+      "paymentInformation": {
+        "cardNumber": "",
+        "type": "",
+        "holder": ""
+      }
+    }
+  ],
+  "bikeStations": [
+    {
+      "id": 1,
+      "name": "Centro Civico",
+      "address": "Av. Centro Civico 124",
+      "maxCapacity": 10
+    },
+    {
+      "id": 2,
+      "name": "Villa Maria",
+      "address": "Av. Villa Maria 323",
+      "maxCapacity": 10
+    },
+    {
+      "id": 3,
+      "name": "Camacho",
+      "address": "Av. La Molina Camacho 123",
+      "maxCapacity": 5
+    }
+  ],
+  "bikes": [
+    {
+      "id": 1,
+      "condition": "Good",
+      "available": true,
+      "idStation": 1
+    },
+    {
+      "id": 2,
+      "condition": "Good",
+      "available": true,
+      "idStation": 1
     },
     {
       "id": 4,
-      "date": "2019-12-04",
-      "description": "Sunglasses, Urban Outfitters",
-      "category": "Fashion",
-      "amount": -24.99
+      "condition": "Broken",
+      "available": false,
+      "idStation": 2
     },
     {
-      "id": 5,
-      "date": "2019-12-06",
-      "description": "Venmo, Alice Pays you for Burrito",
-      "category": "Food",
-      "amount": 8.75
+      "id": 4,
+      "condition": "Good",
+      "available": false,
+      "idStation": 2
+    }
+  ],
+  "rentals": [
+    {
+      "id": 1,
+      "idUser": 1,
+      "idBike": 4
+    }
+  ],
+  "tours" : [
+    {
+      "id" : 1,
+      "name" : "Cultural Places Tour",
+      "hour" : "1:30 hours",
+      "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/6a/a0/24/20180322-145842-largejpg.jpg?w=1200&h=1200&s=1",
+      "price" : 4.00
     },
     {
-      "id": 6,
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": -17.59
+      "id" : 2,
+      "name" : "Culinary Places Tour",
+      "hour" : "1:00 hours",
+      "img" : "https://incaexperience.com/wp-content/uploads/2024/07/ceviche-peruano.webp",
+      "price" : 2.50
     },
     {
-      "id": 7,
-      "date": "2019-12-07",
-      "description": "Birthday Check from Grandma",
-      "category": "Gift",
-      "amount": 50
-    },
+      "id" : 3,
+      "name" : "Status Tour",
+      "hour" : "2:30 hours",
+      "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/a6/13/14/francisco-pizzaro.jpg?w=500&h=500&s=1",
+      "price" : 6.50
+    }
+  ],
+  "tour_booked" : [
     {
-      "id": 8,
-      "date": "2019-12-09",
-      "description": "Lyft Ride",
-      "category": "Transportation",
-      "amount": -13.25
-    },
-    {
-      "id": 9,
-      "date": "2019-12-11",
-      "description": "Paycheck from Bob's Burgers",
-      "category": "Income",
-      "amount": 1000
-    },
-    {
-      "id": 10,
-      "date": "2019-12-16",
-      "description": "Tickets, Flatiron Multiplex Cinemas",
-      "category": "Entertainment",
-      "amount": -24
-    },
-    {
-      "id": 11,
-      "date": "2019-12-16",
-      "description": "MTA Vending Machine: MetroCard",
-      "category": "Transportation",
-      "amount": -116.39
-    },
-    {
-      "id": 12,
-      "date": "2019-12-17",
-      "description": "Venmo, Pay Roommate for Rent",
-      "category": "Housing",
-      "amount": -975
-    },
-    {
-      "date": "2022-07-09",
-      "description": "Office lunch",
-      "category": "Food",
-      "amount": "2000",
-      "id": 13
-    },
-    {
-      "date": "2022-07-09",
-      "description": "Office lunch Wednesday",
-      "category": "Food",
-      "amount": "3000",
-      "id": 14
+      "id" : 1,
+      "name" : "Status Tour",
+      "start_date" : "10/04/2025",
+      "start_hour" : "2:00 pm",
+      "bike_station" : "Centro Civico",
+      "duration" : "2:30",
+      "cost" : "6.50 S/."
     }
   ]
 }
